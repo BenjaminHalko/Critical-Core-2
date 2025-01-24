@@ -17,7 +17,7 @@ function getCoreIncrease() {
 function coreHPDamage() {
     live_auto_call;
     
-    return 1 / 4;	
+    return (1 / (4 + global.round * 0.25));	
 }
 
 function coreHeal() {

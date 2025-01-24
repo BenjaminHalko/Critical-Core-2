@@ -45,7 +45,7 @@ if (irandom(2 + BROWSER * 2) == 0) {
 // Fireball
 if (keyboard_check_pressed(vk_space)) shootFireball = true;
 if (shootFireball) {
-	fireballChargeUp = Approach(fireballChargeUp, 1, 0.1);
+	fireballChargeUp = Approach(fireballChargeUp, 1, 0.2);
 	if (fireballChargeUp == 1) {
 		shootFireball = false;
 		mass -= mass * 0.5;

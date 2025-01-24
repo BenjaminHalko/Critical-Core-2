@@ -6,8 +6,8 @@ if (!instance_exists(oCore)) {
 	BurstBubble(id);
 }
 
-x += lengthdir_x(5, dir);
-y += lengthdir_y(5, dir);
+x += lengthdir_x(6, dir);
+y += lengthdir_y(6, dir);
 
 var _wall = instance_place(x, y, oWall);
 if (_wall != noone) {

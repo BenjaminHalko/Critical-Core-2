@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":2.584399,
+  "duration":0.548934,
   "name":"snFireShoot",
   "parent":{
     "name":"SoundFX",
