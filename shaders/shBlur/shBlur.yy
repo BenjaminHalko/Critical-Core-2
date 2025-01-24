@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shBlur",
+  "name":"shBlur",
+  "parent":{
+    "name":"Render",
+    "path":"folders/Render.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

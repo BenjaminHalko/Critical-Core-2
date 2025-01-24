@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GameOver",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GameOver",
+  "parent":{
+    "name":"Global",
+    "path":"folders/Global.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
