@@ -22,7 +22,7 @@ if (keyLeft or keyRight or keyUp or keyDown) {
 
 if (!global.nextRound and !global.roundIntro and oCore.playerHasMoved) {
 	var _dist = point_distance(0,0,xSpd,ySpd) / 3;
-	mass -= _dist + mass / 300;
+	mass -= _dist + mass / 400;
 	
 	if (radius < 1) {
 		GameOver(true);
