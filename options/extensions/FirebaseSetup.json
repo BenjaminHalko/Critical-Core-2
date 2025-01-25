@@ -6,7 +6,11 @@
     "75639da0-a6d6-48e7-88d8-c81aa1f7ffff": null,
     "f1646d22-9b39-40c6-95b7-0288f97d546f": null,
     "c9006835-7026-44ee-9b1b-d105dd429f40": null,
-    "11a17746-f032-4539-a629-d472bdf4c265": null,
+    "11a17746-f032-4539-a629-d472bdf4c265": {
+      "Default": {
+        "value": "{apiKey: 'AIzaSyDs3JJQC7DHlHxincp0a5fVkf0Bqll4bUM', authDomain: 'critical-core-2.firebaseapp.com', databaseURL: 'https://critical-core-2-default-rtdb.firebaseio.com', projectId: 'critical-core-2', storageBucket: 'critical-core-2.firebasestorage.app', messagingSenderId: '247256444524', appId: '1:247256444524:web:3ff5ec8c7555de558ff249', measurementId: 'G-37LB727YVF'}"
+      }
+    },
     "156128a7-a27e-4aee-9fb0-162d2496a1cb": null,
     "1094a489-64c1-410f-98e0-74b96b74b9fc": null,
     "17d697a8-6d84-4c47-ac42-0cd0dad2866f": null,

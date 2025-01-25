@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":2,
   "conversionMode":0,
-  "duration":195.69211,
+  "duration":198.53845,
   "name":"mMusic",
   "parent":{
     "name":"Music",
