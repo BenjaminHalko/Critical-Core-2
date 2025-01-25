@@ -9,7 +9,7 @@ event_inherited();
 
 function absorb() {
 	if (state == BUBBLE_STATE.DOUBLE_POINTS) audio_play_sound(snPointBoost, 2, false);
-	else audio_play_sound(snCollect, 2, false, 1, 0, min(1.4, (absorbAmount + 240) / 300 - 0.2));
+	else audio_play_sound(snCollect, 2, false, 1, 0, 1.25 * min(1.4, (absorbAmount * 0.4 + 240) / 300 - 0.2));
 	with(instance_create_layer(absorber.x,absorber.y-absorber.radius-1,"GUI",oScore)) {
 		amount = round(other.absorbAmount);
 		double = (other.state == BUBBLE_STATE.DOUBLE_POINTS);

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.193447,
+  "duration":0.115011,
   "name":"snCollect",
   "parent":{
     "name":"SoundFX",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snCollect.wav",
   "type":0,
-  "volume":0.25,
+  "volume":1.0,
 }
