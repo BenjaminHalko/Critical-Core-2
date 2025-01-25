@@ -19,6 +19,7 @@ var _y = y+random_range(-3, 3)*fireballChargeUp;
 shader_set(shCore);
 shader_set_uniform_f(oCore.uTime, global.coreEffectTime);
 shader_set_uniform_f(oCore.uResolution, RES_WIDTH/2, RES_HEIGHT/2);
+shader_set_uniform_f(oCore.uIntensity, 0.5);
 var _sides = 20;
 draw_primitive_begin(pr_trianglestrip);
 for(var i = 0; i < _sides; i++) {

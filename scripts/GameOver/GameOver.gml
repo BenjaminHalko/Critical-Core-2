@@ -84,7 +84,7 @@ function PlayerExplode() {
 				radius = random_range(_radius / 5, _radius / 3);
 				speed = random(2);
 				direction = random(360);
-				image_blend = choose(c_white, #FF005E, #9400DD);
+				image_blend = choose(c_white, c_aqua);
 				spd = random_range(0.01,0.02);
 			}
 		}

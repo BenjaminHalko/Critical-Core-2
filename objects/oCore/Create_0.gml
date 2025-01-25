@@ -68,3 +68,4 @@ bgLayer = layer_background_get_id("Background");
 
 uTime = shader_get_uniform(shCore, "iTime");
 uResolution = shader_get_uniform(shCore, "iResolution");
+uIntensity = shader_get_uniform(shCore, "intensity");
