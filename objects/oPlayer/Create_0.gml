@@ -13,4 +13,6 @@ outerSize = radius;
 shootFireball = false;
 fireballChargeUp = 0;
 
+state = BUBBLE_STATE.NORMAL;
+
 

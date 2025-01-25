@@ -35,8 +35,8 @@ if (!oLeaderboardAPI.draw) {
 					}
 				}
 				oGUI.alarm[0] = 1;
-				instance_deactivate_object(id);
 				audio_play_sound(snStart,2,false);
+                instance_destroy();
 			} else {
 				usernameFlash = 1;
 				audio_play_sound(snBlip,2,false);

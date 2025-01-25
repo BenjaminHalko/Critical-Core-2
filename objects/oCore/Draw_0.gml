@@ -29,7 +29,7 @@ if (hpDraw != 1) {
 }
 
 if (hpDraw > 0.05) {
-    draw_set_color(#FF005E);
+    draw_set_color(merge_color(#FF005E, c_red, pulse));
     draw_primitive_begin(pr_trianglelist);
     var _scale = scale * hpDraw;
     for(var i = 0; i < array_length(polygonPoints); i++) {

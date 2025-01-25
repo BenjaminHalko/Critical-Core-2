@@ -29,7 +29,8 @@ function ReturnToMenu() {
 	instance_destroy(oPlayerTrail);
 	instance_destroy(oScore);
 	oLeaderboardAPI.draw = false;
-	instance_activate_object(oMenu);
+    if (!instance_exists(oMenu))
+	   instance_create_layer(0, 0, "GUI", oMenu);
 }
 
 function Respawn() {

@@ -18,7 +18,7 @@ function absorb() {
     if (state == BUBBLE_STATE.WEAPON) {
         with(oPlayer) {
             shootFireball = true;
-            FireballCollect();
+            //FireballCollect();
         }
     }
 	global.score += absorbAmount;
@@ -32,6 +32,19 @@ function absorb() {
 }
 
 if (!instance_exists(absorber)) {
+    // Create particles
+    if (state == BUBBLE_STATE.WEAPON) {
+        if(irandom(4) == 0) {
+            var _dist = random(radius);
+            var _dir = random(360);
+            with(instance_create_depth(x + lengthdir_x(_dist, _dir), y + lengthdir_y(_dist, _dir), depth - 1, oSparkle)) {
+                speed = random(point_distance(other.xSpd, other.ySpd, 0, 0));
+                var _dir2 = point_direction(other.xSpd, other.ySpd, 0, 0);
+                direction = random_range(_dir2 - 5, _dir2 + 5);
+            }
+        }
+    }
+    
 	var _bubble = instance_place(x,y,oBubble);
 	if (_bubble != noone) {
 		if (allowMerge and _bubble.allowMerge) {
