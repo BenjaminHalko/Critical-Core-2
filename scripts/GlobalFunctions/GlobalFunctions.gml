@@ -1,4 +1,4 @@
-#macro FIREBASE_LEADERBOARD_URL ""
+#macro FIREBASE_LEADERBOARD_URL "https://critical-core-2-default-rtdb.firebaseio.com/"
 #macro GXG_CHALLENGE_ID ""
 #macro GOOGLEPLAY_LEADERBOARD_ID ""
 
