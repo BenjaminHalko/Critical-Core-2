@@ -53,7 +53,6 @@ function RoundStart() {
 			if (!global.gameOver) oGUI.alarm[1] = 180;
 		}
 	})
-	global.left = getLeft();
 	with(oCore) {
 		targetScale = getCoreStart();
         hp = 1;

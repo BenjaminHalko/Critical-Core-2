@@ -3,7 +3,6 @@ varying vec4 v_vColour;
 
 uniform float iTime;
 uniform vec2 iResolution;
-uniform float iGreyscale;
 
 // Hash based 3D value noise
 float hash(float n) {
@@ -148,6 +147,5 @@ void main() {
     vec4 res = raymarch(ro, rd);
     vec3 col = res.xyz;
     
-    float brightness = dot( vec3( 0.2989, 0.5870, 0.1140 ), col.rgb );
-    gl_FragColor = v_vColour * vec4(mix(vec3(brightness), col.rgb, iGreyscale), 1.0);
+    gl_FragColor = v_vColour * vec4(col, 1.0);
 }

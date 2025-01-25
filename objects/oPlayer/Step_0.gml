@@ -22,7 +22,7 @@ if (keyLeft or keyRight or keyUp or keyDown) {
 
 if (!global.nextRound and !global.roundIntro and oCore.playerHasMoved) {
 	var _dist = point_distance(0,0,xSpd,ySpd) / 3;
-	mass -= _dist + mass / 400;
+	mass -= _dist + mass / 500;
 	
 	if (radius < 1) {
 		GameOver(true);
@@ -31,7 +31,7 @@ if (!global.nextRound and !global.roundIntro and oCore.playerHasMoved) {
 
 // Fade Values
 pulse = ApproachFade(pulse, 0, 0.05, 0.7);
-image_blend = merge_color(#FF005E, #9400DD, pulse);
+image_blend = merge_color(c_white, #9400DD, pulse);
 
 // Trail
 if (irandom(2 + BROWSER * 2) == 0) {
@@ -54,6 +54,6 @@ if (shootFireball) {
 	fireballChargeUp = Approach(fireballChargeUp, 0, 0.1);	
 }
 
-image_blend = merge_color(image_blend, c_red, fireballChargeUp);
+//image_blend = merge_color(image_blend, c_red, fireballChargeUp);
 
 outerSize = ApproachFade(outerSize, radius, 0.5, 0.8);

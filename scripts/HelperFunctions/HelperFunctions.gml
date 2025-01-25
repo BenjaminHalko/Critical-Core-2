@@ -117,35 +117,8 @@ function drawCircle(_x, _y, _radius, _bubble=true) {
     
 	
 	if (_bubble) {
-        //draw_set_color(c_white);
-        if (object_index == oPlayer) {
-            shader_set(shCore);
-            shader_set_uniform_f(oCore.uTime, current_time * 0.002);
-            shader_set_uniform_f(oCore.uResolution, room_width, room_height);
-            shader_set_uniform_f(oCore.uGreyscale, 1);
-            var _sides = 20;
-            draw_primitive_begin(pr_trianglestrip);
-            for(var i = 0; i < _sides; i++) {
-                draw_vertex_texture(_x, _y, 0.5, 0.5);
-                draw_vertex_texture(
-                    _x + lengthdir_x(_radius, i / _sides * 360),
-                    _y + lengthdir_y(_radius, i / _sides * 360),
-                    0.5 + lengthdir_x(0.5, i / _sides * 360),
-                    0.5 + lengthdir_y(0.5, i / _sides * 360)
-                );
-                draw_vertex_texture(
-                    _x + lengthdir_x(_radius, (i + 1) / _sides * 360),
-                    _y + lengthdir_y(_radius, (i + 1) / _sides * 360),
-                    0.5 + lengthdir_x(0.5, (i + 1) / _sides * 360),
-                    0.5 + lengthdir_y(0.5, (i + 1) / _sides * 360)
-                );
-            }
-            draw_primitive_end();
-            shader_reset();
-        } else {
-            draw_circle(_x-_offset, _y-_offset, _radius, false);
-        }
-
+        draw_circle(_x-_offset, _y-_offset, _radius, false);
+        
         // Outline
 		var _currentColor = draw_get_color();
 		var _newSat = color_get_saturation(_currentColor) * 0.3;

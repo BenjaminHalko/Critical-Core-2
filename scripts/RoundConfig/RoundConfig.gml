@@ -1,7 +1,3 @@
-function getLeft() {
-	return 1500 + 150 * global.round;
-}
-
 function getCoreStart() {
     live_auto_call;
     
@@ -11,7 +7,7 @@ function getCoreStart() {
 function getCoreIncrease() {
     live_auto_call;
     
-	return 0.02 + 0.0025 * global.round + 0.05 * (1-oCore.hp);
+	return 0.01 + 0.0025 * global.round + 0.05 * (1-oCore.hp);
 }
 
 function coreHPDamage() {

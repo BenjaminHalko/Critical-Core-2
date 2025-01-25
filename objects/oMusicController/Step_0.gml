@@ -1,5 +1,7 @@
 /// @desc 
 
+EnableLive;
+
 var _currentBeat = audio_sound_get_track_position(music) / 60 * 130;
 var _tick = _currentBeat % 0.5;
 global.audioTick = (_tick < lastTick);
@@ -35,6 +37,7 @@ if (global.audioTick) {
 	}
 	
 	if (global.audioBeat % 1 == 0) {
+        coreEffectPulse = 1;
 		with(oWall) {
 			beatPulse = max(beatPulse, 0.5 + 2 * (index == -1));
 			colorPulse = max(colorPulse, 0.5 + 0.2 * (index == -1));
@@ -47,3 +50,6 @@ if (global.audioTick) {
 		}
 	}
 }
+
+coreEffectPulse = ApproachFade(coreEffectPulse, 0, 0.1, 0.8);
+global.coreEffectTime += 0.005 + coreEffectPulse * 0.02;
