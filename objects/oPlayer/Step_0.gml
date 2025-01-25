@@ -56,4 +56,6 @@ if (shootFireball) {
 
 //image_blend = merge_color(image_blend, c_red, fireballChargeUp);
 
+if (radius > outerSize)
+    outerSize = radius;
 outerSize = ApproachFade(outerSize, radius, 0.5, 0.8);

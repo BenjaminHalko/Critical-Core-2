@@ -14,7 +14,7 @@ if (dashLineAmount > 0 and movementPercent != 1) {
 shader_set(shCore);
 shader_set_uniform_f(uTime, -global.coreEffectTime);
 shader_set_uniform_f(uResolution, RES_WIDTH/2, RES_HEIGHT/2);
-shader_set_uniform_f(uIntensity, 0.7);
+shader_set_uniform_f(uIntensity, 0.5);
 
 if (hpDraw != 1) {
     draw_set_color(c_white);
@@ -30,10 +30,10 @@ if (hpDraw != 1) {
 }
 
 if (hpDraw > 0.05) {
-	shader_set_uniform_f(uIntensity, 0.8);
+    shader_set_uniform_f(uIntensity, 0);
     draw_set_color(merge_color(#FF005E, c_red, pulse));
     draw_primitive_begin(pr_trianglelist);
-    var _scale = scale * hpDraw;
+    var _scale = max(0.05, scale * hpDraw);
     for(var i = 0; i < array_length(polygonPoints); i++) {
         var j = (i + 1) % array_length(polygonPoints);
         draw_vertex_texture(x,y,x / RES_WIDTH,y / RES_HEIGHT);

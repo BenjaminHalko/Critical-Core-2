@@ -68,9 +68,3 @@ for(var i = 0; i < array_length(walls); i++) {
 		y = other.y+lerp(ystart, other.walls[i].y, _scale)-room_height/2;
 	}
 }
-
-// Flash
-if (bgFlash > 0) {
-    bgFlash = Approach(bgFlash, 0, 0.2);
-    layer_background_blend(bgLayer, merge_color(c_black, c_grey, bgFlash));
-}

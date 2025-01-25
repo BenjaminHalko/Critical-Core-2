@@ -148,8 +148,8 @@ void main() {
     vec4 res = raymarch(ro, rd);
     vec3 col = res.xyz;
 	
-	float intensity = dot(col, vec3(intensity));
-	col = mix(vec3(intensity), col, 1.5);
+	float intense = dot(col, vec3(0.5));
+	col = mix(col * (1.0 + intensity), vec3(intense), intensity * -0.5);
     
-    gl_FragColor = v_vColour * vec4(col * 2.0, 1.0);
+    gl_FragColor = v_vColour * vec4(col, 1.0);
 }

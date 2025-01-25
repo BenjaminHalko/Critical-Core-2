@@ -76,7 +76,7 @@ function PlayerExplode() {
 	audio_play_sound(snExplode, 2, false);
 	instance_create_depth(x,y,oPlayer.depth,oPlayerTrail);
 	with(oPlayer) {
-		repeat(BROWSER ? 80 : max(80, mass / 4)) {
+		repeat(BROWSER ? 80 : clamp(mass / 4, 80, 150)) {
 			var _radius = max(12,radius);
 			var _dir = random(360);
 			var _len = random(_radius * 0.8);
