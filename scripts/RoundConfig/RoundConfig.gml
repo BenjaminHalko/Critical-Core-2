@@ -11,7 +11,7 @@ function getCoreStart() {
 function getCoreIncrease() {
     live_auto_call;
     
-	return 0.008 + 0.0002 * global.round + 0.05 * (1-oCore.hp);
+	return 0.01 + 0.0002 * global.round + 0.05 * (1-oCore.hp);
 }
 
 function coreHPDamage() {
@@ -23,7 +23,7 @@ function coreHPDamage() {
 function coreHeal() {
     live_auto_call;
     
-    return 0.001;	
+    return 0.05;	
 }
 
 function coreWaitToHeal() {

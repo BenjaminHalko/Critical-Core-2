@@ -6,3 +6,5 @@ colorPulse = 0;
 beatColor = c_white;
 flipped = false;
 bossWall = false;
+xscaleStart = image_xscale;
+scaleMenu = 0;

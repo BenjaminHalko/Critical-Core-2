@@ -35,15 +35,15 @@ if (draw) {
 	draw_set_alpha(1);
 	
 	if (scoreOffsetTarget != 0) {
-		draw_sprite(sArrow, 0, room_width/2, _y+18);	
+		draw_sprite(sArrow, 0, RES_WIDTH/2, _y+18);	
 	}
 	
 	if (scoreOffsetTarget < array_length(scores)-scoresPerPage) {
-		draw_sprite_ext(sArrow, 0, room_width/2, _y+94, 1, -1, 0, c_white, 1);	
+		draw_sprite_ext(sArrow, 0, RES_WIDTH/2, _y+94, 1, -1, 0, c_white, 1);	
 	}
 	
 	draw_set_color(c_dkgray);
 	draw_set_halign(fa_center);
-	draw_text(room_width/2,170,"PRESS ENTER TO");
-	draw_text(room_width/2,178,"CONTINUE");
+	draw_text(RES_WIDTH/2,170,"PRESS ENTER TO");
+	draw_text(RES_WIDTH/2,178,"CONTINUE");
 }

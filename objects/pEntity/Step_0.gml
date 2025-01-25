@@ -26,7 +26,7 @@ if (collide) {
 			}
 		}
 		
-		if (object_index == oPlayer) {
+		if (object_index == oPlayer and oCore.playerHasMoved) {
 			if (!_wall.flipped or deathDelay <= 0) { 
 				GameOver();
 			}

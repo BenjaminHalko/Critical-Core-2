@@ -32,10 +32,10 @@ flipShootDir = false;
 walls = [];
 with(oWall) {
 	array_push(other.walls, {
-		x: x,
-		y: y,
+		x: xstart,
+		y: ystart,
 		dir: image_angle,
-		scale: image_xscale
+		scale: xscaleStart
 	});
 }
 
@@ -65,3 +65,7 @@ polygonPoints = [
 
 bgFlash = 0;
 bgLayer = layer_background_get_id("Background");
+
+uTime = shader_get_uniform(shCore, "iTime");
+uResolution = shader_get_uniform(shCore, "iResolution");
+uGreyscale = shader_get_uniform(shCore, "iGreyscale");

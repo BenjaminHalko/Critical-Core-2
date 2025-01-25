@@ -22,9 +22,11 @@ image_yscale = scale;
 
 // Heal
 if (hpWaitHeal <= 0) {
-    hp = min(1, hp + coreHeal());
+    if (global.audioTick and global.audioBeat % 1 == 0) {
+        hp = min(1, hp + coreHeal());
+    }
 } else {
-    hpWaitHeal--;
+    hpWaitHeal = Approach(hpWaitHeal, 0, 1);
 }
 hpDraw = ApproachFade(hpDraw, hp, 0.1, 0.8);
 

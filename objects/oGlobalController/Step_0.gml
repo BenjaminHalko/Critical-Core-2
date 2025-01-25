@@ -17,6 +17,6 @@ if (global.inGame or oLeaderboardAPI.draw) {
 
 // Render
 if (keyboard_check_pressed(vk_control)) {
-	//global.render = !global.render;
-	//Save("settings","render",global.render);
+	global.render = !global.render;
+	Save("settings","render",global.render);
 }

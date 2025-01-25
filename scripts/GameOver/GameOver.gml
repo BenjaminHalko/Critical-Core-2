@@ -95,7 +95,7 @@ function PlayerExplode() {
 function FireballCollect() {
 	ScreenShake(4,5);
 	instance_create_depth(x,y,oPlayer.depth,oPlayerTrail);
-	repeat(BROWSER ? 50 : max(50, mass / 4)) {
+	repeat(50) {
 		var _radius = max(12,radius);
 		var _dir = random(360);
 		var _len = random(_radius * 0.8);

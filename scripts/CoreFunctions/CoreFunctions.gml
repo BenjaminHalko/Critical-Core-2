@@ -9,7 +9,7 @@ function DamageCore() {
         targetScale -= coreTotalDamage();
         hpWaitHeal = coreWaitToHeal();
         
-        if (hp <= 0.05) {
+        if (hp <= 0) {
             NextRound();
         }
     }

@@ -22,7 +22,7 @@ if (keyLeft or keyRight or keyUp or keyDown) {
 
 if (!global.nextRound and !global.roundIntro and oCore.playerHasMoved) {
 	var _dist = point_distance(0,0,xSpd,ySpd) / 3;
-	mass -= _dist + mass / 500;
+	mass -= _dist + mass / 300;
 	
 	if (radius < 1) {
 		GameOver(true);
@@ -43,7 +43,6 @@ if (irandom(2 + BROWSER * 2) == 0) {
 }
 
 // Fireball
-if (keyboard_check_pressed(vk_space)) shootFireball = true;
 if (shootFireball) {
 	fireballChargeUp = Approach(fireballChargeUp, 1, 0.2);
 	if (fireballChargeUp == 1) {
