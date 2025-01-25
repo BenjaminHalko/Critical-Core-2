@@ -62,10 +62,10 @@ if (!global.gameOver) {
 
 for(var i = 0; i < array_length(walls); i++) {
 	with(walls[i].instance) {
-		var _scale = other.scale * 0.5 + 0.06;
+		var _scale = other.scale + 0.12;
 		image_xscale = other.walls[i].scale * _scale;
-		x = other.x+lerp(xstart/2+room_width/4, other.walls[i].x, _scale)-room_width/2;
-		y = other.y+lerp(ystart/2+room_height/4, other.walls[i].y, _scale)-room_height/2;
+		x = other.x+lerp(xstart, other.walls[i].x, _scale)-room_width/2;
+		y = other.y+lerp(ystart, other.walls[i].y, _scale)-room_height/2;
 	}
 }
 

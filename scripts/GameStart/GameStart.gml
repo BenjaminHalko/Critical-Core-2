@@ -35,7 +35,7 @@ function ReturnToMenu() {
 
 function Respawn() {
 	instance_destroy(pEntity);
-	instance_create_layer(room_width/2,100,"Player",oPlayer);
+	instance_create_layer(room_width/2,0,"Player",oPlayer);
 	RoundStart();
 	global.gameOver = false;
 }

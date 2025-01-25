@@ -11,7 +11,7 @@ if (instance_exists(oCore) and bossWall) {
 
 if (!bossWall) {
     scaleMenu = ApproachFade(scaleMenu, !instance_exists(oMenu) and !oLeaderboardAPI.draw, 0.04, 0.8);
-    var _scale = lerp(0.5, 1, scaleMenu);
+    var _scale = lerp(1, 2, scaleMenu);
     image_xscale = xscaleStart * _scale;
     x = lerp(room_width/2, xstart, _scale);
     y = lerp(room_height/2, ystart, _scale);

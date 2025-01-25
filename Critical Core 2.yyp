@@ -63,6 +63,7 @@
     {"id":{"name":"YYFirebaseRealTime","path":"extensions/YYFirebaseRealTime/YYFirebaseRealTime.yy",},},
     {"id":{"name":"fFont","path":"fonts/fFont/fFont.yy",},},
     {"id":{"name":"fScore","path":"fonts/fScore/fScore.yy",},},
+    {"id":{"name":"oBackground","path":"objects/oBackground/oBackground.yy",},},
     {"id":{"name":"Obj_FirebaseREST_Listener_On_RealTime","path":"objects/Obj_FirebaseREST_Listener_On_RealTime/Obj_FirebaseREST_Listener_On_RealTime.yy",},},
     {"id":{"name":"Obj_FirebaseREST_Listener_Once_RealTime","path":"objects/Obj_FirebaseREST_Listener_Once_RealTime/Obj_FirebaseREST_Listener_Once_RealTime.yy",},},
     {"id":{"name":"Obj_FirebaseREST_Listener_RealTime","path":"objects/Obj_FirebaseREST_Listener_RealTime/Obj_FirebaseREST_Listener_RealTime.yy",},},

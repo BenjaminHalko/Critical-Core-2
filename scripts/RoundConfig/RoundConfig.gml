@@ -19,7 +19,7 @@ function coreHPDamage() {
 function coreHeal() {
     live_auto_call;
     
-    return 0.02;	
+    return 0.05;	
 }
 
 function coreWaitToHeal() {
