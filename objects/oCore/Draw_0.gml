@@ -14,7 +14,7 @@ shader_set_uniform_f(uTime, -global.coreEffectTime);
 shader_set_uniform_f(uResolution, RES_WIDTH/2, RES_HEIGHT/2);
 shader_set_uniform_f(uIntensity, 0.5);
 
-if (hpDraw != 1) {
+if (hpDraw < 0.995) {
     draw_set_color(c_white);
     draw_primitive_begin(pr_trianglelist);
     var _scale = scale;
@@ -27,7 +27,7 @@ if (hpDraw != 1) {
     draw_primitive_end();
 }
 
-if (hpDraw > 0) {
+if (hpDraw > 0.01) {
     shader_set_uniform_f(uIntensity, 0);
     draw_set_color(merge_color(#FF005E, c_red, pulse));
     draw_primitive_begin(pr_trianglelist);
