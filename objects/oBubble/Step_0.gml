@@ -12,7 +12,7 @@ function absorb() {
 		amount = round(other.absorbAmount);
 		double = (other.state == BUBBLE_STATE.DOUBLE_POINTS);
 	}
-	if (state == BUBBLE_STATE.DOUBLE_POINTS) absorbAmount *= 2;
+	if (state == BUBBLE_STATE.DOUBLE_POINTS) absorbAmount *= 3;
     if (state == BUBBLE_STATE.WEAPON) {
         with(oPlayer) {
             shootFireball = true;

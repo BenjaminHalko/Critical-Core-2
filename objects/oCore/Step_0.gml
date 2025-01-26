@@ -29,7 +29,7 @@ hpDraw = ApproachFade(hpDraw, hp, 0.1, 0.8);
 
 if (!global.gameOver) {
 	if (_shooting) {
-		if (alarm[0] <= 0 and dashLineAmount > 0.9) {
+		if (alarm[0] <= 0 and dashLineAmount > 0.99) {
 			movementPercent = Approach(movementPercent, 1, coreSpeed());
 			if (movementPercent == 1) {
 				alarm[0] = coreSpeedPause();	
@@ -53,7 +53,7 @@ if (!global.gameOver) {
 }
 
 if (!global.gameOver) {
-	dashLineAmount = ApproachFade(dashLineAmount, 1, 0.1, 0.8);	
+	dashLineAmount = ApproachFade(dashLineAmount, 1, 0.1, 0.85);	
 }
 
 

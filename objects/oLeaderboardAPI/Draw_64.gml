@@ -28,7 +28,8 @@ if (draw) {
 		else _place += "th";
 		
 		draw_text(_x, _scoreY, _place);
-		draw_text(_x+22, _scoreY, scores[i].name);
+        var _stringScale = 46 / max(46, string_width(scores[i].name));
+		draw_text_transformed(_x+22, _scoreY, scores[i].name, _stringScale, 1, 0);
 		draw_text(_x+70, _scoreY, scores[i].points);
 		draw_text(_x+104, _scoreY, scores[i].level);
 	}

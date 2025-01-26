@@ -3,15 +3,15 @@ function getCoreStart() {
 }
 
 function getCoreIncrease() {
-    return 0.01 + 0.0025 * global.round + 0.05 * (1-oCore.hp);
+    return 0.01 + 0.0025 * global.round + 0.04 * (1-oCore.hp);
 }
 
 function coreHPDamage() {
-    return (1 / (3 + global.round * 0.5));	
+    return (1 / (3 + global.round * 0.75));	
 }
 
 function coreHeal() {
-    return 0.02;	
+    return 0.015;	
 }
 
 function coreWaitToHeal() {
@@ -22,11 +22,11 @@ function coreTotalDamage() {
     if (hp == 0)
         return 1;
     
-    return (1-hp) * targetScale * 0.6;
+    return (1-hp) * targetScale * 0.8;
 }
 
 function coreSpeed() {
-	return 0.015 - oCore.targetScale * 0.01;	
+	return 0.01 - oCore.targetScale * 0.005;	
 }
 
 function coreSpeedPause() {
