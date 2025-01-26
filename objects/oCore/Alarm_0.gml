@@ -1,5 +1,3 @@
-EnableLive;
-
 startX = x;
 startY = y;
 do {

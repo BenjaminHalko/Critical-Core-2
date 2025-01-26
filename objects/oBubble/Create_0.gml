@@ -1,7 +1,5 @@
 /// @desc
 
-EnableLive;
-
 enum BUBBLE_STATE { 
 	NORMAL,
 	DOUBLE_POINTS,

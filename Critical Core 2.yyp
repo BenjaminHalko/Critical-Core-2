@@ -10,7 +10,6 @@
   },
   "defaultScriptType":1,
   "Folders":[
-    {"$GMFolder":"","%Name":"~GMLive","folderPath":"folders/~GMLive.yy","name":"~GMLive","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"~Leaderboard API","folderPath":"folders/~Leaderboard API.yy","name":"~Leaderboard API","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Firebase","folderPath":"folders/~Leaderboard API/Firebase.yy","name":"Firebase","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Firebase RealTime","folderPath":"folders/~Leaderboard API/Firebase/Firebase RealTime.yy","name":"Firebase RealTime","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -60,7 +59,6 @@
   "resources":[
     {"id":{"name":"CoreCurves","path":"animcurves/CoreCurves/CoreCurves.yy",},},
     {"id":{"name":"FirebaseSetup","path":"extensions/FirebaseSetup/FirebaseSetup.yy",},},
-    {"id":{"name":"GMLive_fallback","path":"extensions/GMLive_fallback/GMLive_fallback.yy",},},
     {"id":{"name":"YYFirebaseRealTime","path":"extensions/YYFirebaseRealTime/YYFirebaseRealTime.yy",},},
     {"id":{"name":"fFont","path":"fonts/fFont/fFont.yy",},},
     {"id":{"name":"fScore","path":"fonts/fScore/fScore.yy",},},
@@ -68,7 +66,6 @@
     {"id":{"name":"Obj_FirebaseREST_Listener_On_RealTime","path":"objects/Obj_FirebaseREST_Listener_On_RealTime/Obj_FirebaseREST_Listener_On_RealTime.yy",},},
     {"id":{"name":"Obj_FirebaseREST_Listener_Once_RealTime","path":"objects/Obj_FirebaseREST_Listener_Once_RealTime/Obj_FirebaseREST_Listener_Once_RealTime.yy",},},
     {"id":{"name":"Obj_FirebaseREST_Listener_RealTime","path":"objects/Obj_FirebaseREST_Listener_RealTime/Obj_FirebaseREST_Listener_RealTime.yy",},},
-    {"id":{"name":"obj_gmlive","path":"objects/obj_gmlive/obj_gmlive.yy",},},
     {"id":{"name":"oBubble","path":"objects/oBubble/oBubble.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCore","path":"objects/oCore/oCore.yy",},},
@@ -106,8 +103,6 @@
     {"id":{"name":"GameOver","path":"scripts/GameOver/GameOver.yy",},},
     {"id":{"name":"GameStart","path":"scripts/GameStart/GameStart.yy",},},
     {"id":{"name":"GlobalFunctions","path":"scripts/GlobalFunctions/GlobalFunctions.yy",},},
-    {"id":{"name":"GMLive","path":"scripts/GMLive/GMLive.yy",},},
-    {"id":{"name":"GMLiveAPI","path":"scripts/GMLiveAPI/GMLiveAPI.yy",},},
     {"id":{"name":"HelperFunctions","path":"scripts/HelperFunctions/HelperFunctions.yy",},},
     {"id":{"name":"Input","path":"scripts/Input/Input.yy",},},
     {"id":{"name":"LeaderboardAPI","path":"scripts/LeaderboardAPI/LeaderboardAPI.yy",},},

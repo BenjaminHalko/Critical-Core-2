@@ -1,6 +1,4 @@
 function DamageCore() {
-    live_auto_call
-    
     audio_play_sound(snFireHit, 1, false);
     ScreenShake(20, 20);
     oBackground.bgFlash = 1;

@@ -1,35 +1,24 @@
 function getCoreStart() {
-    live_auto_call;
-    
-	return 0.1 + 0.004 * global.round;
+    return 0.1 + 0.004 * global.round;
 }
 
 function getCoreIncrease() {
-    live_auto_call;
-    
-	return 0.01 + 0.0025 * global.round + 0.05 * (1-oCore.hp);
+    return 0.01 + 0.0025 * global.round + 0.05 * (1-oCore.hp);
 }
 
 function coreHPDamage() {
-    live_auto_call;
-    
     return (1 / (4 + global.round * 0.25));	
 }
 
 function coreHeal() {
-    live_auto_call;
-    
     return 0.05;	
 }
 
 function coreWaitToHeal() {
-    live_auto_call;
-    
     return 120;	
 }
 
 function coreTotalDamage() {
-    live_auto_call;
     if (hp == 0)
         return 1;
     
@@ -37,20 +26,14 @@ function coreTotalDamage() {
 }
 
 function coreSpeed() {
-	live_auto_call;
-	
 	return 0.015 - oCore.targetScale * 0.01;	
 }
 
 function coreSpeedPause() {
-	live_auto_call;
-	
 	return 30;
 }
 
 function coreShoot() {
-    live_auto_call;
-    
     var _shoot = function(_shootDir, _obj, _size = 0) {
         var _layer = _obj == oSpike ? "Spikes" : "Bubbles";
         with(instance_create_layer(x+lengthdir_x(5,_shootDir),y+lengthdir_y(5,_shootDir),_layer,_obj)) {

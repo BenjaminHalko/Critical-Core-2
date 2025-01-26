@@ -1,7 +1,5 @@
 /// @desc 
 
-EnableLive;
-
 hp = 1;
 hpRotation = 0;
 hpWaitHeal = 0;

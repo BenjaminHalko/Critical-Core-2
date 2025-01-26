@@ -1,7 +1,5 @@
 /// @desc 
 
-EnableLive;
-
 // Draw Dash Line
 if (dashLineAmount > 0 and movementPercent != 1) {
 	var _dist = point_distance(x, y, targetX, targetY) * dashLineAmount;

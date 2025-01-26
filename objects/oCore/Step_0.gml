@@ -1,8 +1,5 @@
 /// @desc 
 
-
-EnableLive;
-
 var _shooting = false;
 
 if (!global.gameOver and !global.nextRound and !global.roundIntro and playerHasMoved) {

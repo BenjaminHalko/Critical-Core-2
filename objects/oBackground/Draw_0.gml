@@ -1,5 +1,3 @@
-EnableLive;
-
 surface_set_target(surface);
 draw_clear_alpha(c_black, 0);
 camera_apply(view_camera[0]);
@@ -25,4 +23,4 @@ gpu_set_blendmode(bm_normal);
 
 surface_reset_target();
 
-draw_surface(surface, camera_get_view_x(oCamera.cam), camera_get_view_y(oCamera.cam));
+draw_surface(surface, round(camera_get_view_x(oCamera.cam)), round(camera_get_view_y(oCamera.cam)));

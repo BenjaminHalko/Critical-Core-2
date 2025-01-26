@@ -1,7 +1,5 @@
 /// @desc 
 
-EnableLive;
-
 var _currentColor = image_blend;
 var _newSat = color_get_saturation(_currentColor) * 0.3;
 	

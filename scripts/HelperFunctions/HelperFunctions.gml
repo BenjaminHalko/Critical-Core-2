@@ -111,8 +111,6 @@ function RotateVector(_x, _y, _angle) {
 }
 
 function drawCircle(_x, _y, _radius, _bubble=true) {
-    live_auto_call
-
     var _offset = 0.5 + (!BROWSER)*0.5;
     
 	

@@ -1,7 +1,5 @@
 /// @desc 
 
-EnableLive;
-
 switch(state) {
 	default:
 		draw_set_color(c_aqua);//#2ECBFF);

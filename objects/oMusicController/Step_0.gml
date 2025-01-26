@@ -1,7 +1,5 @@
 /// @desc 
 
-EnableLive;
-
 if (music == noone) {
     music = audio_play_sound(mMusic, 1, true);
 }

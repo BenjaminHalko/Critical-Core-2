@@ -61,3 +61,5 @@ if (moveTutorial and global.inGame) {
 	draw_set_valign(fa_middle);
 	draw_text(RES_WIDTH/2, RES_HEIGHT/2, "MOVE TO START");
 }
+
+draw_text(32, 32, fps); 

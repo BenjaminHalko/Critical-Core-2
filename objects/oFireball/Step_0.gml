@@ -1,7 +1,5 @@
 /// @desc Move towards boss
 
-EnableLive;
-
 if (!instance_exists(oCore)) {
 	BurstBubble(id);
 }

@@ -1,7 +1,5 @@
 /// @desc Shake Camera
 
-EnableLive;
-
 // Update Target Position
 if (instance_exists(targetObject)) {
 	targetPos.x = floor(lerp(targetObject.x, oCore.x, 0.35));
