@@ -11,8 +11,9 @@ draw_set_color(make_color_hsv(
 drawCircleOutline(x, y, outerSize);
 
 draw_set_color(image_blend);
-var _x = x+random_range(-3, 3)*fireballChargeUp;
-var _y = y+random_range(-3, 3)*fireballChargeUp;
+var _offset = OPERA * 1;
+var _x = x+random_range(-3, 3)*fireballChargeUp-_offset;
+var _y = y+random_range(-3, 3)*fireballChargeUp-_offset;
 
 shader_set(shCore);
 shader_set_uniform_f(oCore.uTime, global.coreEffectTime);
