@@ -48,7 +48,8 @@ if (shootFireball) {
 	if (fireballChargeUp == 1) {
 		shootFireball = false;
 		mass -= mass * 0.5;
-		instance_create_depth(x, y, depth-1, oFireball);
+		var _fire = instance_create_depth(x, y, depth-1, oFireball);
+        _fire.image_blend = #EEA612;
 	}
 } else {
 	fireballChargeUp = Approach(fireballChargeUp, 0, 0.1);	
