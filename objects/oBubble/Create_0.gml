@@ -19,7 +19,7 @@ state = BUBBLE_STATE.NORMAL;
 
 if (irandom(5) == 0) {
 	state = BUBBLE_STATE.WEAPON;
-} else if (irandom(clamp(30-global.round,15,20)-1) == 0) {
+} else if (irandom(4) == 0) {
 	state = BUBBLE_STATE.DOUBLE_POINTS;	
 }
 

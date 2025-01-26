@@ -7,15 +7,15 @@ function getCoreIncrease() {
 }
 
 function coreHPDamage() {
-    return (1 / (4 + global.round * 0.25));	
+    return (1 / (3 + global.round * 0.5));	
 }
 
 function coreHeal() {
-    return 0.05;	
+    return 0.02;	
 }
 
 function coreWaitToHeal() {
-    return 120;	
+    return 180;	
 }
 
 function coreTotalDamage() {

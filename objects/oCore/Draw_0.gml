@@ -27,7 +27,7 @@ if (hpDraw != 1) {
     draw_primitive_end();
 }
 
-if (hpDraw > 0.05) {
+if (hpDraw > 0) {
     shader_set_uniform_f(uIntensity, 0);
     draw_set_color(merge_color(#FF005E, c_red, pulse));
     draw_primitive_begin(pr_trianglelist);
