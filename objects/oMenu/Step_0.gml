@@ -6,7 +6,7 @@ if (!oLeaderboardAPI.draw) {
 		keySelect = false;
 		disableSelect = false;
 	}
-	if (DESKTOP or BROWSER) {
+	if (DESKTOP or BROWSER or OPERA) {
 		if (keyDown or keyUp) and (option != 2 or (!keyboard_check(ord("W")) and !keyboard_check(ord("S")))) {
 			if (acceptMenuInput) {
 				if (option == 2) {
@@ -50,11 +50,19 @@ if (!oLeaderboardAPI.draw) {
 	
 		if (option == 2) {
 			if (alarm[0] <= 0) alarm[0] = 30;
-			if keyboard_lastkey != vk_nokey {
-				if (keyboard_lastkey == vk_backspace or (ord(keyboard_lastchar) >= 32 and ord(keyboard_lastchar) <= 255)) and string_length(keyboard_string) <= 10 and (keyboard_lastkey != vk_space or string_length(global.username) > 0) global.username = keyboard_string;
-				else keyboard_string = global.username;
-				keyboard_lastkey = vk_nokey;
-			}
+			if (keyboard_lastkey == vk_backspace or (ord(keyboard_lastchar) >= 32 and ord(keyboard_lastchar) <= 255)) and string_length(keyboard_string) <= 10 and (keyboard_lastkey != vk_space or string_length(global.username) > 0) {
+                if (OPERA and string_length(keyboard_string) > string_length(global.username)) {
+                    var _char = string_char_at(keyboard_string, string_length(keyboard_string));
+                    if (keyboard_check(vk_shift))
+                        _char = string_upper(_char);
+                    else
+                        _char = string_lower(_char);
+                    keyboard_string = string_copy(keyboard_string, 1, string_length(keyboard_string)-1) + _char;
+                }
+                global.username = keyboard_string;
+            }
+            else keyboard_string = global.username;
+            keyboard_lastkey = vk_nokey;
 		}
 	
 		if (option == 3) {

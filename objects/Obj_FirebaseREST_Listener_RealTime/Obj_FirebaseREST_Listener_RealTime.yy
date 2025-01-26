@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/~Leaderboard API/Firebase/Firebase RealTime/Extensions/Firebase REST API Library (Don't Touch)/Listeners RealTime/Tools/Objects.yy",
+    "path":"folders/~Leaderboard API/Firebase/Firebase RealTime/Extensions/Firebase REST API Library (Don't Touch)/Listeners RealTime/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":true,

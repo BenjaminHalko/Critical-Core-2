@@ -35,7 +35,7 @@ function LeaderboardPost() {
 			
 			global.highscore = scores[0].points;
 			
-			FirebaseRealTime(FIREBASE_LEADERBOARD_URL).Path(_score.name).Set(json_stringify({
+			FirebaseRealTime().Path(_score.name).Set(json_stringify({
 				points: _score.points,
 				level: _score.level
 			}));

@@ -4,7 +4,7 @@ if(async_load[?"id"] == request)
 {   
 	alarm[0] = refreshCall
 	
-    if(async_load[?"http_status"] == 200 and async_load[?"status"] == 0)
+    if(async_load[?"http_status"] == 200)
     {
 		countError = 0
         if(firstTime or async_load[?"result"] != cache)

@@ -1,7 +1,7 @@
 
 function FirebaseREST_HTTP_Success_RealTime()
 {
-	switch(event)
+    switch(event)
 	{
 		default:
 			FirebaseREST_asyncCall_RealTime()

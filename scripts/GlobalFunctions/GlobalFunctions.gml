@@ -9,7 +9,7 @@
 #macro DESKTOP (global.ostype == OS.OSDESKTOP)
 #macro MOBILE (global.ostype == OS.OSMOBILE or os_type == os_android or global.mobileOperaGX)
 
-#macro OTHER_LEADERBOARD (OPERA or MOBILE)
+#macro OTHER_LEADERBOARD false
 
 enum OS {
 	OSBROWSER,
