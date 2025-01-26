@@ -3,8 +3,6 @@
 #macro RES_WIDTH 256
 #macro RES_HEIGHT 224
 
-instance_create_depth(0, 0, 0, obj_gmlive);
-
 randomize();
 
 getOsType();
