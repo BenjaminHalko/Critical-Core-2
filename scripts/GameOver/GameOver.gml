@@ -5,6 +5,14 @@ function GameOver(_instant=false) {
 		global.gameOver = true;
 		global.nextRound = false;
 		global.roundIntro = false;
+        with(oCore) {
+            dashLineAmount = 0;
+            movementPercent = 0;
+            startX = x;
+            startY = y;
+            targetX = room_width/2;
+            targetY = room_height/2;
+        }
 		with(oBubble) {
 			if (object_index == oPlayer) continue;
 			BurstBubble(id);	
@@ -38,7 +46,15 @@ function NextRound() {
 		}
 		global.score += 10000;
 		global.round++;
-		oCore.targetScale = getCoreStart();
+        with(oCore) {
+            targetScale = getCoreStart();
+            dashLineAmount = 0;
+            movementPercent = 0;
+            startX = x;
+            startY = y;
+            targetX = room_width/2;
+            targetY = room_height/2;
+        }
 		audio_play_sound(snStart, 2, false, 1, 0, 1.2);
 		with(oBubble) {
 			if (object_index == oPlayer) continue;

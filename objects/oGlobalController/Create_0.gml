@@ -11,7 +11,7 @@ surface_resize(application_surface, RES_WIDTH, RES_HEIGHT);
 
 if (DESKTOP) {
 	window_enable_borderless_fullscreen(true);
-	window_set_size(256*4, 224*4);
+	window_set_size(256*3, 224*3);
 	window_center();
 }
 

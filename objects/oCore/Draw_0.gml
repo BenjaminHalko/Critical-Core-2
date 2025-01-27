@@ -5,8 +5,7 @@ if (dashLineAmount > 0 and movementPercent != 1) {
 	var _dist = point_distance(x, y, targetX, targetY) * dashLineAmount;
 	var _dir =  point_direction(x, y, targetX, targetY);
 	
-	draw_sprite_ext(sCoreTargetLine, 1, x + lengthdir_x(_dist, _dir), y + lengthdir_y(_dist, _dir), (_dist) / 5, 1, _dir-180, c_white, 1);
-	//draw_sprite(sCoreTargetLine, 0, x + lengthdir_x(_dist, _dir)-3, y + lengthdir_y(_dist, _dir));
+	draw_sprite_ext(sCoreTargetLine, 0, x + lengthdir_x(_dist, _dir), y + lengthdir_y(_dist, _dir), (_dist) / 5, 1, _dir-180, c_white, 1);
 }
 
 shader_set(shCore);

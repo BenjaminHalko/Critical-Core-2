@@ -27,35 +27,31 @@ if (hpWaitHeal <= 0) {
 }
 hpDraw = ApproachFade(hpDraw, hp, 0.1, 0.8);
 
-if (!global.gameOver) {
-	if (_shooting) {
-		if (alarm[0] <= 0 and dashLineAmount > 0.99) {
-			movementPercent = Approach(movementPercent, 1, coreSpeed());
-			if (movementPercent == 1) {
-				alarm[0] = coreSpeedPause();	
-			}
-			
-			var _percent = animcurve_channel_evaluate(movementCurve, movementPercent);
-			x = lerp(startX, targetX, _percent);
-			y = lerp(startY, targetY, _percent);
-		}
-	} else {
-		alarm[0] = -1;
-		movementPercent = 1;
-		dashLineAmount = 0;
-		startX = x;
-		startY = y;
-		targetX = x;
-		targetY = y;
-		x = ApproachFade(x, room_width/2, 5, 0.7);
-		y = ApproachFade(y, room_height/2, 5, 0.7);
-	}
+
+if (_shooting) {
+    if (alarm[0] <= 0 and dashLineAmount > 0.99) {
+        movementPercent = Approach(movementPercent, 1, coreSpeed());
+        if (movementPercent == 1) {
+            alarm[0] = coreSpeedPause();	
+        }
+        
+        var _percent = animcurve_channel_evaluate(movementCurve, movementPercent);
+        x = lerp(startX, targetX, _percent);
+        y = lerp(startY, targetY, _percent);
+    }
+} else if (global.roundIntro or global.nextRound) {
+    alarm[0] = -1;
+    if (dashLineAmount > 0.99 or global.roundIntro) {
+        movementPercent = Approach(movementPercent, 1, global.roundIntro ? 0.05 : coreSpeed() * 2);
+        
+        var _percent = animcurve_channel_evaluate(movementCurve, movementPercent);
+        x = lerp(startX, targetX, _percent);
+        y = lerp(startY, targetY, _percent);
+    }
 }
 
-if (!global.gameOver) {
-	dashLineAmount = ApproachFade(dashLineAmount, 1, 0.1, 0.85);	
-}
-
+if (!global.gameOver)
+    dashLineAmount = ApproachFade(dashLineAmount, 1, 0.1, 0.85);	
 
 for(var i = 0; i < array_length(walls); i++) {
 	with(walls[i].instance) {
