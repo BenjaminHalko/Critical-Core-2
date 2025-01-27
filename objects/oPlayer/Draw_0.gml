@@ -11,7 +11,7 @@ draw_set_color(make_color_hsv(
 drawCircleOutline(x, y, outerSize);
 
 draw_set_color(image_blend);
-var _offset = OPERA * 1;
+var _offset = OPERA * 0.5;
 var _x = x+random_range(-3, 3)*fireballChargeUp-_offset;
 var _y = y+random_range(-3, 3)*fireballChargeUp-_offset;
 
