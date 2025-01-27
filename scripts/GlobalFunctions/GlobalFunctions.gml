@@ -1,5 +1,5 @@
 #macro FIREBASE_LEADERBOARD_URL "https://critical-core-2-default-rtdb.firebaseio.com/"
-#macro GXG_CHALLENGE_ID ""
+#macro GXG_CHALLENGE_ID "ab1f63bf-6b43-4248-bbc1-da82678b4144"
 #macro GOOGLEPLAY_LEADERBOARD_ID ""
 
 #macro SAVEFILE "save.ini"
@@ -8,8 +8,6 @@
 #macro OPERA (global.ostype == OS.OSOPERA)
 #macro DESKTOP (global.ostype == OS.OSDESKTOP)
 #macro MOBILE (global.ostype == OS.OSMOBILE or os_type == os_android or global.mobileOperaGX)
-
-#macro OTHER_LEADERBOARD false
 
 enum OS {
 	OSBROWSER,

@@ -48,6 +48,8 @@ if (_shooting) {
         x = lerp(startX, targetX, _percent);
         y = lerp(startY, targetY, _percent);
     }
+} else {
+    alarm[0] = -1;
 }
 
 if (!global.gameOver)

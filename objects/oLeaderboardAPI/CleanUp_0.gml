@@ -1,3 +1,4 @@
 /// @desc 
 
-FirebaseRealTime(FIREBASE_LEADERBOARD_URL).ListenerRemove(listener);
+if (!global.gxGames)
+    FirebaseRealTime(FIREBASE_LEADERBOARD_URL).ListenerRemove(listener);

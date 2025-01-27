@@ -11,13 +11,20 @@ if (draw) {
 	
 	draw_text(_x+8, _y, "PLACE");
 	draw_text(_x+42, _y, "NAME");
-	draw_text(_x+80, _y, "SCORE");
-	draw_text(_x+106, _y, "ROUND");
+    if (global.gxGames) {
+        draw_text(_x+106, _y, "SCORE");
+    } else {
+    	draw_text(_x+80, _y, "SCORE");
+    	draw_text(_x+106, _y, "ROUND");
+    }
 	
 	draw_set_halign(fa_left);
 	
 	for(var i = max(0, scoreOffsetTarget-1); i < min(array_length(scores), scoreOffsetTarget+scoresPerPage+1); i++) {
-		draw_set_color((scores[i].name == global.username) ? c_yellow : c_white);
+        if (global.gxGames)
+            draw_set_color((scores[i].userID == global.userID) ? c_yellow : c_white);
+        else
+            draw_set_color((scores[i].name == global.username) ? c_yellow : c_white);
 		draw_set_alpha(1 - median(0, 1, abs((i - scoreOffset) - 3.5) - 3.5));
 		var _scoreY = _y + (i - scoreOffset) * 9 + 16;
 		
@@ -28,10 +35,18 @@ if (draw) {
 		else _place += "th";
 		
 		draw_text(_x, _scoreY, _place);
-        var _stringScale = 46 / max(46, string_width(scores[i].name));
+        var _stringScale = 1;
+        if (!global.gxGames) {
+            _stringScale = 46 / max(46, string_width(scores[i].name));
+        }
 		draw_text_transformed(_x+22, _scoreY, scores[i].name, _stringScale, 1, 0);
-		draw_text(_x+70, _scoreY, scores[i].points);
-		draw_text(_x+104, _scoreY, scores[i].level);
+        if (global.gxGames) {
+            draw_text(_x+96, _scoreY, scores[i].points);
+        } else {
+            draw_text(_x+70, _scoreY, scores[i].points);
+            draw_text(_x+104, _scoreY, scores[i].level);
+        }
+		
 	}
 	draw_set_alpha(1);
 	

@@ -18,7 +18,7 @@ if (!oLeaderboardAPI.draw) {
 					
 					Save("settings","username",global.username);
 				}
-				option = Wrap(option + keyDown - keyUp, 0, 3);
+				option = Wrap(option + keyDown - keyUp, 0, 3 - global.gxGames);
 				if (option == 2) keyboard_string = global.username;
 				acceptMenuInput = false;
 				audio_play_sound(snBlip,2,false);
@@ -48,7 +48,7 @@ if (!oLeaderboardAPI.draw) {
 			audio_play_sound(snBlip,2,false);
 		}
 	
-		if (option == 2) {
+		if (option == 2 and !global.gxGames) {
 			if (alarm[0] <= 0) alarm[0] = 30;
 			if (keyboard_lastkey == vk_backspace or (ord(keyboard_lastchar) >= 32 and ord(keyboard_lastchar) <= 255)) and string_length(keyboard_string) <= 10 and (keyboard_lastkey != vk_space or string_length(global.username) > 0) {
                 if (OPERA and string_length(keyboard_string) > string_length(global.username)) {
@@ -65,7 +65,7 @@ if (!oLeaderboardAPI.draw) {
             keyboard_lastkey = vk_nokey;
 		}
 	
-		if (option == 3) {
+		if (option == (global.gxGames ? 2 : 3)) {
 			if (keyLeft or keyRight) {
 				if (volAcceptMenuInput) {
 					volAcceptMenuInput = false;
