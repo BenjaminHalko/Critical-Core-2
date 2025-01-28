@@ -62,7 +62,6 @@ function LeaderboardPost() {
 			
             if (global.gxGames) {
                 gxc_challenge_submit_score(_score.points, undefined, {challengeId: GXG_CHALLENGE_ID});
-                LeaderboardGet();
             } else {
     			FirebaseRealTime().Path(_score.name).Set(json_stringify({
     				points: _score.points,

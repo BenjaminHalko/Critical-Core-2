@@ -10,6 +10,8 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"~GXC API","folderPath":"folders/~GXC API.yy","name":"~GXC API","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Http Manager","folderPath":"folders/~GXC API/Http Manager.yy","name":"Http Manager","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"~Leaderboard API","folderPath":"folders/~Leaderboard API.yy","name":"~Leaderboard API","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Firebase","folderPath":"folders/~Leaderboard API/Firebase.yy","name":"Firebase","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Firebase RealTime","folderPath":"folders/~Leaderboard API/Firebase/Firebase RealTime.yy","name":"Firebase RealTime","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -34,14 +36,10 @@
     {"$GMFolder":"","%Name":"Background","folderPath":"folders/Global/Background.yy","name":"Background","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Camera","folderPath":"folders/Global/Camera.yy","name":"Camera","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sparkle","folderPath":"folders/Global/Sparkle.yy","name":"Sparkle","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"~GXC API","folderPath":"folders/~GXC API.yy","name":"~GXC API","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Http Manager","folderPath":"folders/~GXC API/Http Manager.yy","name":"Http Manager","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Render","folderPath":"folders/Render.yy","name":"Render","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"GXC_Library_Documentation.pdf","CopyToMask":0,"filePath":"datafiles","name":"GXC_Library_Documentation.pdf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-  ],
+  "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{

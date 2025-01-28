@@ -19,9 +19,9 @@ state = BUBBLE_STATE.NORMAL;
 
 if (irandom(5) == 0) {
 	state = BUBBLE_STATE.WEAPON;
-} else if (irandom(4) == 0) {
-	state = BUBBLE_STATE.DOUBLE_POINTS;	
-}
+} //else if (irandom(4) == 0) {
+	//state = BUBBLE_STATE.DOUBLE_POINTS;	
+//}
 
 setRadius = function() {
 	radius = sqrt(mass / pi);
