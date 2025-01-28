@@ -10,7 +10,7 @@ scoresPerPage = 8;
 disableSelect = false;
 
 global.highscore = 0;
-global.gxGames = true;
+global.gxGames = false;
 global.userID = "";
 
 LeaderboardGet();
