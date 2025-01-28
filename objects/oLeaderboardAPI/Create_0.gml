@@ -10,22 +10,26 @@ scoresPerPage = 8;
 disableSelect = false;
 
 global.highscore = 0;
-global.gxGames = false;
+global.gxGames = !is_undefined(gxc_get_query_param("game"));
 global.userID = "";
 
-LeaderboardGet();
-
-if (!global.gxGames)
+if (!global.gxGames) {
+    LeaderboardGet();
     listener = FirebaseRealTime(FIREBASE_LEADERBOARD_URL).Path("/").Listener();
-else {
-    global.username = "Player";
-    gxc_profile_get_info( function(_status, _result)
+    room_goto_next();
+} else {
+    gxc_profile_get_info(function(_status, _result)
     {
-       if (_status == 200)
-       {
+        if (_status == 200)
+        {
             global.userID = _result.data.userId;
             global.username = _result.data.username;
-       }
+        } else {
+            listener = FirebaseRealTime(FIREBASE_LEADERBOARD_URL).Path("/").Listener();
+            global.gxGames = false;
+        }
+        
+        LeaderboardGet();
+        room_goto_next();
     });
-
 }

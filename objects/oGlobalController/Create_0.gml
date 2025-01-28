@@ -23,8 +23,9 @@ global.pb =  ini_read_real("score","score",0);
 global.render = ini_read_real("settings","render",true);
 ini_close();
 
+if (string_length(global.username) > 10)
+    global.username = "";
+
 audio_master_gain(global.audioVol);
 
 instance_create_layer(0,0,layer,oLeaderboardAPI);
-
-room_goto_next();

@@ -16,7 +16,8 @@ if (!oLeaderboardAPI.draw) {
 						_usernameLength = string_length(global.username);
 					}
 					
-					Save("settings","username",global.username);
+                    if (!global.gxGames)
+					   Save("settings","username",global.username);
 				}
 				option = Wrap(option + keyDown - keyUp, 0, 3 - global.gxGames);
 				if (option == 2) keyboard_string = global.username;
