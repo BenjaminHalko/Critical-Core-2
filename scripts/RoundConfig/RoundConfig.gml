@@ -53,8 +53,7 @@ function coreShoot() {
     switch(global.round) {
         case 1: {
             _shoot(shootDir, oBubble, random_range(100, 150));
-            _shoot(shootDir+120, oBubble, random_range(100, 150));
-            _shoot(shootDir+240, oBubble, random_range(100, 150));
+            _shoot(shootDir+180, oBubble, random_range(100, 150));
         } break;
         case 2: {
             _shoot(shootDir, oBubble, random_range(100, 120));
@@ -69,21 +68,21 @@ function coreShoot() {
         } break;
         case 4: {
             _shoot(shootDir, oBubble, random_range(220, 250));
-            _shoot(shootDir+180, choose(oBubble, oBubble, oSpike), random_range(220, 250));
+            _shoot(shootDir+180, choose(oBubble, oBubble, oBubble, oSpike), random_range(220, 250));
         } break;
         default: {
             if (global.round % 3 == 0) {
-                _shoot(shootDir, oBubble, random_range(100, 160));
-                _shoot(shootDir+180, choose(oBubble, oBubble, oSpike), random_range(100, 160));
-                _shoot(shootDir+90, oBubble, random_range(100, 180));
-                _shoot(shootDir+270, oBubble, random_range(100, 180));
+                _shoot(shootDir, oBubble, random_range(60, 130));
+                _shoot(shootDir+180, choose(oBubble, oSpike), random_range(100, 130));
+                _shoot(shootDir+90, oBubble, random_range(60, 130));
+                _shoot(shootDir+270, oBubble, random_range(60, 130));
             } else if (global.round % 3 == 1) {
-                _shoot(shootDir, irandom(6) == 0 ? oSpike : oBubble, random_range(170, 220));
-                _shoot(shootDir+180, irandom(6) == 0 ? oSpike : oBubble, random_range(170, 220));
+                _shoot(shootDir, irandom(3) == 0 ? oSpike : oBubble, random_range(200, 220));
+                _shoot(shootDir+180, irandom(3) == 0 ? oSpike : oBubble, random_range(200, 220));
             } else {
-                _shoot(shootDir, irandom(6) == 0 ? oSpike : oBubble, random_range(130, 180));
+                _shoot(shootDir, irandom(1) == 0 ? oSpike : oBubble, random_range(130, 180));
                 _shoot(shootDir+120, oBubble, random_range(100, 140));
-                _shoot(shootDir+240, irandom(3) == 0 ? oSpike : oBubble, random_range(150, 180));
+                _shoot(shootDir+240, irandom(2) == 0 ? oSpike : oBubble, random_range(150, 180));
             }			
         } break;
     }
