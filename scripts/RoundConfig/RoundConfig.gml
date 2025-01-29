@@ -80,25 +80,14 @@ function coreShoot() {
                 _shoot(shootDir, irandom(5) == 0 ? oSpike : oBubble, random_range(200, 220));
                 _shoot(shootDir+180, irandom(5) == 0 ? oSpike : oBubble, random_range(200, 220));
             } else {
-                _shoot(shootDir, irandom(1) == 0 ? oSpike : oBubble, random_range(130, 180));
+                _shoot(shootDir, irandom(4) == 0 ? oSpike : oBubble, random_range(130, 180));
                 _shoot(shootDir+120, oBubble, random_range(100, 140));
-                _shoot(shootDir+240, irandom(2) == 0 ? oSpike : oBubble, random_range(150, 180));
+                _shoot(shootDir+240, irandom(4) == 0 ? oSpike : oBubble, random_range(150, 180));
             }			
         } break;
     }
     
-    if (global.round >= 8) {
-        if (global.audioBeat % 2 == 0) {
-            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y),oSpike);
-            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y)+120,oSpike);
-            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y)-120,oSpike);
-        }
-    } else if (global.round >= 5) {
-        if (global.audioBeat % 2 == 0) {
-            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y)+30,oSpike);
-            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y)-30,oSpike);
-        }
-    } else if (global.round >= 2) {
+    if (global.round >= 2) {
         if (global.audioBeat % 2 == 0) {
             _shoot(point_direction(x,y,oPlayer.x,oPlayer.y),oSpike);
         }

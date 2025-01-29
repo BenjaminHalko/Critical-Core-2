@@ -17,7 +17,10 @@ absorbAmount = 0;
 
 state = BUBBLE_STATE.NORMAL;
 
-if (irandom(5) == 0) {
+if (irandom(5) == 0 or oCore.timeSinceLastPurple > 60 * 3) {
+    with(oCore) {
+        timeSinceLastPurple = 0;
+    }
 	state = BUBBLE_STATE.WEAPON;
 } //else if (irandom(4) == 0) {
 	//state = BUBBLE_STATE.DOUBLE_POINTS;	

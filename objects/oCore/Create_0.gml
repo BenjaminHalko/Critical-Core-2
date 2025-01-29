@@ -16,6 +16,8 @@ targetY = y;
 movementCurve = animcurve_get_channel(CoreCurves, "movement");
 movementPercent = 0;
 
+timeSinceLastPurple = 0;
+
 
 dashLineAmount = 0;
 

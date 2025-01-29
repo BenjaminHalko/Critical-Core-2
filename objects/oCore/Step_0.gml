@@ -29,6 +29,7 @@ hpDraw = ApproachFade(hpDraw, hp, 0.1, 0.8);
 
 
 if (_shooting) {
+    timeSinceLastPurple++;
     if (alarm[0] <= 0 and dashLineAmount > 0.99) {
         movementPercent = Approach(movementPercent, 1, coreSpeed());
         if (movementPercent == 1) {
@@ -40,6 +41,7 @@ if (_shooting) {
         y = lerp(startY, targetY, _percent);
     }
 } else if (global.roundIntro or global.nextRound) {
+    timeSinceLastPurple = 0;
     alarm[0] = -1;
     if (dashLineAmount > 0.99 or global.roundIntro) {
         movementPercent = Approach(movementPercent, 1, global.roundIntro ? 0.05 : coreSpeed() * 2);
