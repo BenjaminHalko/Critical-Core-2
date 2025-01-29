@@ -30,7 +30,9 @@ if (hpDraw > 0.01) {
     shader_set_uniform_f(uIntensity, 0);
     draw_set_color(merge_color(#FF005E, c_red, pulse));
     draw_primitive_begin(pr_trianglelist);
-    var _scale = max(0.05, scale * hpDraw);
+    var _scale = scale * hpDraw;
+    if (hp != 1 and hp != 0)
+        _scale = max(0.05, _scale);
     for(var i = 0; i < array_length(polygonPoints); i++) {
         var j = (i + 1) % array_length(polygonPoints);
         draw_vertex_texture(x,y,x / RES_WIDTH,y / RES_HEIGHT);

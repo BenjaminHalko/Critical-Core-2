@@ -7,7 +7,7 @@ function getCoreIncrease() {
 }
 
 function coreHPDamage() {
-    return (1 / (3 + global.round * 0.75));	
+    return (1 / (3.5 + global.round * 0.75));	
 }
 
 function coreHeal() {
@@ -68,7 +68,7 @@ function coreShoot() {
         } break;
         case 4: {
             _shoot(shootDir, oBubble, random_range(220, 250));
-            _shoot(shootDir+180, choose(oBubble, oBubble, oBubble, oSpike), random_range(220, 250));
+            _shoot(shootDir+180, oBubble, random_range(220, 250));
         } break;
         default: {
             if (global.round % 3 == 0) {
@@ -77,8 +77,8 @@ function coreShoot() {
                 _shoot(shootDir+90, oBubble, random_range(60, 130));
                 _shoot(shootDir+270, oBubble, random_range(60, 130));
             } else if (global.round % 3 == 1) {
-                _shoot(shootDir, irandom(3) == 0 ? oSpike : oBubble, random_range(200, 220));
-                _shoot(shootDir+180, irandom(3) == 0 ? oSpike : oBubble, random_range(200, 220));
+                _shoot(shootDir, irandom(5) == 0 ? oSpike : oBubble, random_range(200, 220));
+                _shoot(shootDir+180, irandom(5) == 0 ? oSpike : oBubble, random_range(200, 220));
             } else {
                 _shoot(shootDir, irandom(1) == 0 ? oSpike : oBubble, random_range(130, 180));
                 _shoot(shootDir+120, oBubble, random_range(100, 140));
@@ -87,8 +87,21 @@ function coreShoot() {
         } break;
     }
     
-    if (global.round >= 2 and global.audioBeat % 2 == 0) {
-        _shoot(point_direction(x,y,oPlayer.x,oPlayer.y),oSpike);
+    if (global.round >= 8) {
+        if (global.audioBeat % 2 == 0) {
+            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y),oSpike);
+            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y)+120,oSpike);
+            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y)-120,oSpike);
+        }
+    } else if (global.round >= 5) {
+        if (global.audioBeat % 2 == 0) {
+            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y)+30,oSpike);
+            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y)-30,oSpike);
+        }
+    } else if (global.round >= 2) {
+        if (global.audioBeat % 2 == 0) {
+            _shoot(point_direction(x,y,oPlayer.x,oPlayer.y),oSpike);
+        }
     }
 }
 
