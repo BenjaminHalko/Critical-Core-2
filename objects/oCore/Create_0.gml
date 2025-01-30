@@ -4,6 +4,7 @@ hp = 1;
 hpRotation = 0;
 hpWaitHeal = 0;
 hpDraw = 1;
+hpHit = 0;
 
 shootDir = random(360);
 x = room_width/2;

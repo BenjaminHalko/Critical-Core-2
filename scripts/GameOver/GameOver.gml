@@ -12,6 +12,7 @@ function GameOver(_instant=false) {
             startY = y;
             targetX = room_width/2;
             targetY = room_height/2;
+            hpHit = 0;
         }
 		with(oBubble) {
 			if (object_index == oPlayer) continue;

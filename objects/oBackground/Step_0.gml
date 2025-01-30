@@ -1,6 +1,3 @@
-if (!surface_exists(surface))
-    surface = surface_create(RES_WIDTH, RES_HEIGHT);
-
 for(var i = 0; i < bubbleCount; i++) {
     var _b = bubbles[i];
     

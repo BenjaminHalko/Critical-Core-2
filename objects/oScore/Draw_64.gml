@@ -8,5 +8,5 @@ draw_set_valign(fa_bottom);
 var _amount = negative ? $"-{amount}": (double ? $"{amount}x3" : string(amount));
 
 draw_set_alpha(image_alpha);
-draw_text(x-camera_get_view_x(oCamera.cam),y-camera_get_view_y(oCamera.cam)-16*(1-image_alpha),_amount);
+draw_text((x-camera_get_view_x(oCamera.cam))*(RES_WIDTH/oCamera.viewWidth),(y-camera_get_view_y(oCamera.cam))*(RES_WIDTH/oCamera.viewWidth)-16*(1-image_alpha),_amount);
 draw_set_alpha(1);

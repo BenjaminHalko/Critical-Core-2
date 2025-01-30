@@ -9,6 +9,8 @@ shakeRemain = 0;
 viewWidth = RES_WIDTH;
 viewHeight = RES_HEIGHT;
 
+scale = 1;
+
 targetObject = oPlayer;
 targetPos = {
 	x: room_width/2,
@@ -17,5 +19,3 @@ targetPos = {
 
 x = targetPos.x;
 y = targetPos.y;
-
-camWidth = 256;
