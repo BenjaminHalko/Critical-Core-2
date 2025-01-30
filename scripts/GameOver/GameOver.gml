@@ -44,6 +44,7 @@ function NextRound() {
 			oGUI.displayExtraLives = true;
 		} else {
 			oGUI.displayExtraLives = false;
+            global.score += 2500;
 		}
 		global.score += 10000;
 		global.round++;
@@ -55,6 +56,7 @@ function NextRound() {
             startY = y;
             targetX = room_width/2;
             targetY = room_height/2;
+            hpHit = 0;
         }
 		audio_play_sound(snStart, 2, false, 1, 0, 1.2);
 		with(oBubble) {

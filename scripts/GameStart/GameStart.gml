@@ -57,6 +57,7 @@ function RoundStart() {
 	with(oCore) {
 		targetScale = getCoreStart();
         hp = 1;
+        hpHit = 0;
 	}
 }
 

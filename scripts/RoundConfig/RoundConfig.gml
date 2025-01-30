@@ -3,7 +3,7 @@ function getCoreStart() {
 }
 
 function getCoreIncrease() {
-    return 0.01 + 0.0025 * global.round + 0.04 * (1-oCore.hp) + 0.01 * hpHit;
+    return 0.01 + 0.0025 * global.round + 0.04 * oCore.hpHit;
 }
 
 function coreHPDamage() {
@@ -21,9 +21,7 @@ function coreWaitToHeal() {
 function coreTotalDamage() {
     if (hp == 0)
         return 1;
-    
-    var _debuff = clamp((hpHit - 1) * 1.5, 0, 1);
-    return (1-hp) * targetScale * 0.5 * (1 - _debuff);
+    return (1-hp) * targetScale * 0.5;
 }
 
 function coreSpeed() {
