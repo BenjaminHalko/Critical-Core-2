@@ -21,7 +21,7 @@ function coreWaitToHeal() {
 function coreTotalDamage() {
     if (hp == 0)
         return 1;
-    return (1-hp) * targetScale * 0.5;
+    return (1-hp) * targetScale * 0.6;
 }
 
 function coreSpeed() {

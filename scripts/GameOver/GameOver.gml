@@ -44,7 +44,7 @@ function NextRound() {
 			oGUI.displayExtraLives = true;
 		} else {
 			oGUI.displayExtraLives = false;
-            global.score += 2500;
+            global.score += 1500;
 		}
 		global.score += 10000;
 		global.round++;
