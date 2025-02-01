@@ -16,17 +16,11 @@ function absorb() {
     if (state == BUBBLE_STATE.WEAPON) {
         with(oPlayer) {
             shootFireball = true;
-            //FireballCollect();
         }
     }
 	global.score += absorbAmount;
-	//global.left -= absorbAmount;
 	absorber.pulse = 1;
 	absorber.mass += mass;
-	if global.left <= 0 {
-		//global.left = 0;
-		//NextRound();
-	}
 }
 
 if (!instance_exists(absorber)) {
@@ -91,17 +85,6 @@ if (!instance_exists(absorber)) {
 							absorb();	
 						}
 					}
-                    
-                    if (_bubble.state == BUBBLE_STATE.WEAPON) {
-                        var _count = 0;
-                        with(oBubble) {
-                            if (state == BUBBLE_STATE.WEAPON)
-                                _count++;
-                        }
-                        if (_count <= 1) {
-                            oCore.timeSinceLastPurple = infinity;
-                        }
-                    }
 					instance_destroy(_bubble);
 				}
 			}
@@ -135,7 +118,7 @@ if (object_index == oBubble) {
 		}
 		
 		if (_inner and _outer) {
-			BurstBubble(id);	
+			BurstBubble(id);
 		}
 	}
 	ds_list_destroy(_list);

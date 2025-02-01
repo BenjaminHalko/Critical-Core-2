@@ -29,7 +29,7 @@ function GameOver(_instant=false) {
 				}
 			});
 		} else {
-			PlayerExplode();
+			PlayerExplode(true);
 			instance_destroy(oSpike);
 			RestartRound();
 		}
@@ -90,12 +90,12 @@ function BurstBubble(_bubble) {
 	}
 }
 
-function PlayerExplode() {
+function PlayerExplode(_small=false) {
 	ScreenShake(12,40);
 	audio_play_sound(snExplode, 2, false);
 	instance_create_depth(x,y,oPlayer.depth,oPlayerTrail);
 	with(oPlayer) {
-		repeat(BROWSER ? 80 : clamp(mass / 4, 80, 150)) {
+		repeat(_small ? 20 : (BROWSER ? 80 : clamp(mass / 4, 80, 150))) {
 			var _radius = max(12,radius);
 			var _dir = random(360);
 			var _len = random(_radius * 0.8);
@@ -105,6 +105,10 @@ function PlayerExplode() {
 				direction = random(360);
 				image_blend = choose(c_white, c_aqua);
 				spd = random_range(0.01,0.02);
+                if (_small) {
+                    speed /= 2;
+                    radius /= 2;
+                }
 			}
 		}
 		instance_destroy();

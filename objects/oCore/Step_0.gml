@@ -4,8 +4,18 @@ var _shooting = false;
 
 if (!global.gameOver and !global.nextRound and !global.roundIntro and playerHasMoved) {
 	if (global.audioTick and global.audioBeat % 1 == 0) {
-		shootDir += (20 + global.round * 4) * (flipShootDir ? -1 : 1);
-		coreShoot();
+		shootDir += (30 + global.round * 4) * (flipShootDir ? -1 : 1);
+        var _count = 0;
+        with(oBubble) {
+            if (state == BUBBLE_STATE.WEAPON)
+                _count++;
+        }
+        if ((global.audioBeat % 4 == 0 and _count < 5) or (global.audioBeat % 4 == 2 and _count < 2))
+            timeSinceLastPurple = 1;
+        else {
+            timeSinceLastPurple = 0;
+        }
+        coreShoot();
 	}
 	_shooting =  true;
 }
@@ -29,7 +39,6 @@ hpDraw = ApproachFade(hpDraw, hp, 0.1, 0.8);
 
 
 if (_shooting) {
-    timeSinceLastPurple++;
     if (alarm[0] <= 0 and dashLineAmount > 0.99) {
         movementPercent = Approach(movementPercent, 1, coreSpeed());
         if (movementPercent == 1) {

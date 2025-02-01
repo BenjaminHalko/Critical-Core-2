@@ -28,6 +28,7 @@ repeat(bubbleCount) {
         y: room_height/2 + lengthdir_y(_dist, _dir),
         dir: _dir,
         spd: 0,
-        alpha: 0
+        alpha: 0,
+        purple: 0
     });
 }

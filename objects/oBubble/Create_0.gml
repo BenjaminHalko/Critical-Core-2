@@ -17,7 +17,7 @@ absorbAmount = 0;
 
 state = BUBBLE_STATE.NORMAL;
 
-if (irandom(5) == 0 or oCore.timeSinceLastPurple > 60 * 3) {
+if (oCore.timeSinceLastPurple >= 1) {
     with(oCore) {
         timeSinceLastPurple = 0;
     }

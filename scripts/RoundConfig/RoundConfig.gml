@@ -25,11 +25,11 @@ function coreTotalDamage() {
 }
 
 function coreSpeed() {
-	return 0.01 - oCore.targetScale * 0.005;	
+	return 0.008 - oCore.targetScale * 0.003;	
 }
 
 function coreSpeedPause() {
-	return 30;
+	return 40;
 }
 
 function coreShoot() {
@@ -44,7 +44,7 @@ function coreShoot() {
         
             if (object_index == oBubble) {
                 mass = _size;
-                setRadius();
+                //setRadius();
             }
         }
     }

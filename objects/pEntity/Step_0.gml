@@ -9,7 +9,11 @@ if (collide) {
 		if (_angleDifference <= 90) { 
 			if (object_index != oPlayer) {
 				var _len = point_distance(0,0,xSpd,ySpd);
-				var _wallAngle = Wrap(_dir - clamp(_angleDifference, -85, 85) - _wall.flipped*180 - 90, 0, 360);
+				var _wallAngle = _dir - clamp(_angleDifference, -85, 85) - _wall.flipped*180 - 90;
+                if (_wallAngle < 0)
+                    _wallAngle += 360;
+                else if (_wallAngle >= 360)
+                    _wallAngle -= 360;
 				_dir = 2 * _wallAngle - _dir;
 				xSpd = lengthdir_x(_len, _dir);
 				ySpd = lengthdir_y(_len, _dir);
