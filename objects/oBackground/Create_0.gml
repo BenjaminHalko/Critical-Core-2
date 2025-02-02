@@ -15,7 +15,7 @@ polygonPoints = [
     [-104, -24]
 ];
 
-bubbleCount = 200;
+bubbleCount = 300;
 bubbles = [];
 bubbleFrameCount = sprite_get_number(sBGBubbles);
 

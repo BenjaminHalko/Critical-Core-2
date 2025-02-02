@@ -10,7 +10,7 @@ if (!global.gameOver and !global.nextRound and !global.roundIntro and playerHasM
             if (state == BUBBLE_STATE.WEAPON)
                 _count++;
         }
-        if ((global.audioBeat % 4 == 0 and _count < 5) or (global.audioBeat % 4 == 2 and _count < 2))
+        if ((global.audioBeat % 4 == 0 and _count < 5) or (global.audioBeat % 4 == 2 and _count < (scale > 0.5 ? 4 : 2)))
             timeSinceLastPurple = 1;
         else {
             timeSinceLastPurple = 0;
