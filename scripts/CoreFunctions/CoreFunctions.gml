@@ -3,13 +3,14 @@ function DamageCore() {
     ScreenShake(10, 20);
     oBackground.bgFlash = 1;
     with(oCore) {
-        if (targetScale < 0.5)
+        if (targetScale < 0.4) {
             timeSinceLastPurple = 3;
+            shootDir = random(360);
+        }
         hp = max(0, hp-coreHPDamage());
         targetScale -= coreTotalDamage();
         hpWaitHeal = coreWaitToHeal();
         hpHit += coreHPDamage();
-        shootDir = random(360);
         
         if (hp <= 0) {
             NextRound();
