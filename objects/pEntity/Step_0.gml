@@ -57,8 +57,8 @@ if (collide) {
 }
 
 // Move
-if (collide) {
-    spdMult = ApproachFade(spdMult, 0, 0.1, 0.8);
-}
-x += xSpd * (1 + spdMult * oCore.scale * 2);
-y += ySpd * (1 + spdMult * oCore.scale * 2);
+//if (collide) {
+    //spdMult = ApproachFade(spdMult, 0, 0.1, 0.8);
+//}
+x += xSpd;
+y += ySpd;

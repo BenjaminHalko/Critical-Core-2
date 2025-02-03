@@ -2,8 +2,8 @@
 
 // Update Target Position
 if (instance_exists(targetObject)) {
-	targetPos.x = floor(lerp(targetObject.x, oCore.x, 0.3));
-	targetPos.y = floor(lerp(targetObject.y, oCore.y, 0.3));
+	targetPos.x = floor(lerp(targetObject.x, oCore.x, 0.35));
+	targetPos.y = floor(lerp(targetObject.y, oCore.y, 0.35));
     
     var _targetScale = clamp(1 + ValuePercent(targetObject.radius / 2 + oCore.sprite_width / 8, 13, 50) * 1.5, 1, 1.5);
     if (global.roundIntro)

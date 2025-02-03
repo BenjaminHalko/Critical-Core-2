@@ -44,6 +44,9 @@ function coreShoot() {
         
             if (object_index == oBubble) {
                 mass = _size;
+                if (state == BUBBLE_STATE.WEAPON) {
+                    mass += 10;
+                }
                 //setRadius();
             }
         }
