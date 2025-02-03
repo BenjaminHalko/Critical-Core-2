@@ -7,7 +7,7 @@ if (!global.gameOver and !global.nextRound and !global.roundIntro and playerHasM
 		shootDir += (30 + global.round * 4) * (flipShootDir ? -1 : 1);
         var _count = 0;
         with(oBubble) {
-            if (state == BUBBLE_STATE.WEAPON)
+            if (state == BUBBLE_STATE.WEAPON or object_index == oFireball)
                 _count++;
         }
         
@@ -15,7 +15,7 @@ if (!global.gameOver and !global.nextRound and !global.roundIntro and playerHasM
             timeSinceLastPurple--;
         }
         if (timeSinceLastPurple <= 0) {
-            if (global.audioBeat % 2 == 0 and _count < 4)
+            if (global.audioBeat % 2 == 0 and _count < 3)
                 timeSinceLastPurple = 1;
             else
                 timeSinceLastPurple = 0;
