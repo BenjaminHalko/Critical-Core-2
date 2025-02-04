@@ -5,7 +5,7 @@ if(async_load[?"status"] != 1)// 1==downloading, 0==success ,<0==Error
 if(async_load[?"id"] == request)
 {
 	
-    if(async_load[?"http_status"] == 200 and async_load[?"status"] == 0)
+    if(async_load[?"http_status"] == 200)
     {
 		FirebaseREST_HTTP_Success_RealTime()
         instance_destroy()

@@ -28,7 +28,10 @@ function ReturnToMenu() {
 	instance_destroy(pEntity);
 	instance_destroy(oPlayerTrail);
 	instance_destroy(oScore);
-	oLeaderboardAPI.draw = false;
+    with(oLeaderboardAPI) {
+        draw = false;
+    }
+    
     if (!instance_exists(oMenu))
 	   instance_create_layer(0, 0, "GUI", oMenu);
 }
@@ -78,6 +81,7 @@ function PositionLeaderboard() {
 }
 
 function GotoLeaderboard() {
+    LeaderboardGet();
 	PositionLeaderboard();		
 	with(oLeaderboardAPI) {		
 		draw = true;

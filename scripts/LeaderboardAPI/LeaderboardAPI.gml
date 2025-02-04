@@ -1,12 +1,14 @@
 /// @desc Get the current leaderboards
 function LeaderboardGet(_page=undefined) {
     if (global.gxGames) {
-        if (is_undefined(_page))
-            scores = [];
         gxc_challenge_get_global_scores(function(_status, _result) {
             if (_status == 200 and array_length(_result.data.scores) > 0) {
                 var _pageData = _result.data.pagination;
                 var _scores = _result.data.scores;
+                
+                if (_pageData.currPage == 0) {
+                    scores = [];
+                }
             
                 for(var i = 0; i < array_length(_scores); i++) {
                     var _scoreData = _scores[i];
@@ -24,10 +26,13 @@ function LeaderboardGet(_page=undefined) {
                 
                 global.highscore = scores[0].points;
                 
-                if (_pageData.currPage+1 != _pageData.totalPages)
+                if (_pageData.currPage+1 != _pageData.totalPages) {
                     LeaderboardGet(_pageData.currPage + 1);
+                } else {
+                    PositionLeaderboard();
+                }
             }
-        }, {challengeId: GXG_CHALLENGE_ID, page: _page, trackId: "dfa76484-a683-4e33-afd6-9c984d824881"});
+        }, {challengeId: GXG_CHALLENGE_ID, page: _page});
     } else
 	   FirebaseRealTime(FIREBASE_LEADERBOARD_URL).Path("/").Read();
 }

@@ -20,13 +20,16 @@ if (draw) {
 	
 	draw_set_halign(fa_left);
 	
-	for(var i = max(0, scoreOffsetTarget-1); i < min(array_length(scores), scoreOffsetTarget+scoresPerPage+1); i++) {
+	for(var i = max(0, scoreOffsetTarget-round(1*scrollSpd)); i < min(array_length(scores), scoreOffsetTarget+scoresPerPage+round(1*scrollSpd)); i++) {
         if (global.gxGames)
             draw_set_color((scores[i].userID == global.userID) ? c_yellow : c_white);
         else
             draw_set_color((scores[i].name == global.username) ? c_yellow : c_white);
 		draw_set_alpha(1 - median(0, 1, abs((i - scoreOffset) - 3.5) - 3.5));
 		var _scoreY = _y + (i - scoreOffset) * 9 + 16;
+        var _scoreX = _x;
+        if (i >= 999)
+            _scoreX -= 4;
 		
 		var _place = string(i + 1);
 		if ((i+1) % 10 == 1 and (i+1) % 100 != 11) _place += "st";
@@ -34,7 +37,7 @@ if (draw) {
 		else if ((i+1) % 10 == 3 and (i+1) % 100 != 13) _place += "rd";
 		else _place += "th";
 		
-		draw_text(_x, _scoreY, _place);
+		draw_text(_scoreX, _scoreY, _place);
         var _stringScale = 1;
         if (!global.gxGames) {
             _stringScale = 46 / max(46, string_width(scores[i].name));
