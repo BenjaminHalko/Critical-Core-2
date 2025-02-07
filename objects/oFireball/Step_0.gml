@@ -1,7 +1,8 @@
 /// @desc Move towards boss
 
-if (!instance_exists(oCore)) {
+if (!instance_exists(oCore) or !instance_exists(oPlayer)) {
 	BurstBubble(id);
+    exit;
 }
 
 x += lengthdir_x(6, dir);

@@ -7,6 +7,17 @@ function GameStart() {
 	global.nextRound = false;
 	oGUI.newPB = false;
 	Respawn();
+    
+    for(var i = 0; i < 5; i++) {
+        var _dist = 25;
+        var _dir = i * 360 / 5 + 90;
+        with(instance_create_layer(oPlayer.x + lengthdir_x(_dist, _dir), oPlayer.y + lengthdir_y(_dist, _dir), "Bubbles", oBubble)) {
+            mass = 150;
+            if (i == 0) {
+                state = BUBBLE_STATE.WEAPON;
+            }
+        }
+    }
 }
 
 function GameEnd() {
