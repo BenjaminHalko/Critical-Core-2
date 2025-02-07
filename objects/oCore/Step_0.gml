@@ -59,6 +59,8 @@ if (_shooting) {
     timeSinceLastPurple = 0;
     alarm[0] = -1;
     if (dashLineAmount > 0.99 or global.roundIntro) {
+        targetX = room_width/2;
+        targetY = room_height/2;
         movementPercent = Approach(movementPercent, 1, global.roundIntro ? 0.05 : coreSpeed() * 2);
         
         var _percent = animcurve_channel_evaluate(movementCurve, movementPercent);

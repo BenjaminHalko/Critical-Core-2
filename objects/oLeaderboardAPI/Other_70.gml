@@ -1,6 +1,5 @@
 /// @desc Get Scores
 
-show_debug_message(async_load[? "value"]);
 if (async_load[? "type"] == "FirebaseRealTime_Read" or async_load[? "type"] == "FirebaseRealTime_Listener") {
     if (async_load[? "status"] == 200) {
 		var _data = async_load[? "value"];
@@ -32,7 +31,10 @@ if (async_load[? "type"] == "FirebaseRealTime_Read" or async_load[? "type"] == "
 			
 			global.highscore = scores[0].points;
             
-            PositionLeaderboard();
+            if (!moved)
+                PositionLeaderboard();
 		}
 	}
+} else if (async_load[? "type"] == "FirebaseRealTime_Set") {
+    LeaderboardGet();
 }

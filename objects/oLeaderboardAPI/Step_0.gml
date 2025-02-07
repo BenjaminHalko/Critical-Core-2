@@ -16,6 +16,7 @@ if (draw) {
 	scoreOffset = Approach(scoreOffset, scoreOffsetTarget, max(scrollSpd - 1, 1)*0.4);
     if (keyDown - keyUp != 0) {
         scrollSpd += 0.05;
+        moved = true;
     } else {
         scrollSpd = 1;
     }

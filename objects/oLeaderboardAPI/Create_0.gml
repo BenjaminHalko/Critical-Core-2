@@ -10,6 +10,8 @@ scoresPerPage = 8;
 disableSelect = false;
 scrollSpd = 1;
 
+moved = false;
+
 global.highscore = 0;
 global.gxGames = !is_undefined(gxc_get_query_param("game"));
 global.userID = "";

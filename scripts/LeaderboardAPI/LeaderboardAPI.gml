@@ -28,7 +28,7 @@ function LeaderboardGet(_page=undefined) {
                 
                 if (_pageData.currPage+1 != _pageData.totalPages) {
                     LeaderboardGet(_pageData.currPage + 1);
-                } else {
+                } else if (!oLeaderboardAPI.moved) {
                     PositionLeaderboard();
                 }
             }
@@ -73,7 +73,7 @@ function LeaderboardPost() {
 			global.highscore = scores[0].points;
 			
             if (global.gxGames) {
-                gxc_challenge_submit_score(_score.points, undefined, {challengeId: GXG_CHALLENGE_ID});
+                gxc_challenge_submit_score(_score.points, LeaderboardGet, {challengeId: GXG_CHALLENGE_ID});
             } else {
     			FirebaseRealTime(FIREBASE_LEADERBOARD_URL).Path(_score.name).Set(json_stringify({
     				points: _score.points,

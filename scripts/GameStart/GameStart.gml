@@ -13,7 +13,7 @@ function GameEnd() {
 	instance_destroy(oCore);
 	instance_destroy(pEntity);
 	LeaderboardPost();
-	GotoLeaderboard();
+    GotoLeaderboard();
 }
 
 function ReturnToMenu() {
@@ -81,10 +81,10 @@ function PositionLeaderboard() {
 }
 
 function GotoLeaderboard() {
-    LeaderboardGet();
-	PositionLeaderboard();		
-	with(oLeaderboardAPI) {		
-		draw = true;
-		disableSelect = true;
-	}
+    with(oLeaderboardAPI) {
+        moved = false;
+        draw = true;
+        disableSelect = true;
+    }
+	PositionLeaderboard();
 }

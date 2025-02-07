@@ -313,8 +313,6 @@ function FirebaseRealTimeBuilder(_database, _path) constructor {
 		__.priority = _priority;
 		__.path = build_path();
 		
-		show_debug_message(self);
-		
 		if(__firebase_realtime_should_use_sdk())
 			return FirebaseRealTime_SDK(json_stringify(__));
 				
