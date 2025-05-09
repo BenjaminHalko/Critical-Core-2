@@ -28,6 +28,23 @@ function GameEnd() {
 }
 
 function ReturnToMenu() {
+	if (global.noInternet) {
+		global.username = $"Player {array_length(oLeaderboardAPI.scores) + 1}";
+		for(var i = 0; i < array_length(oLeaderboardAPI.scores); i++) {
+			var _name = $"Player {i + 1}";
+			for(var j = 0; j < array_length(oLeaderboardAPI.scores); j++) {
+				if (oLeaderboardAPI.scores[j].name == _name) {
+					_name = "";
+					break;	
+				}
+			}
+			
+			if (_name != "") {
+				global.username = _name;
+				break;
+			}
+		}
+	}
 	global.inGame = false;
 	global.gameOver = false;
 	global.nextRound = false;

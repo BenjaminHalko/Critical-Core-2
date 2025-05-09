@@ -49,7 +49,8 @@ function LeaderboardPost() {
 	
 	if (_score.points > global.pb) {
 		global.pb = _score.points;
-		Save("score", "score", _score.points);
+		if (!global.noInternet)
+			Save("score", "score", _score.points);
 		oGUI.newPB = true;
 	}
 	with(oLeaderboardAPI) {
@@ -74,7 +75,7 @@ function LeaderboardPost() {
 			
             if (global.gxGames) {
                 gxc_challenge_submit_score(_score.points, LeaderboardGet, {challengeId: GXG_CHALLENGE_ID});
-            } else {
+            } else if (!global.noInternet) {
     			FirebaseRealTime(FIREBASE_LEADERBOARD_URL).Path(_score.name).Set(json_stringify({
     				points: _score.points,
     				level: _score.level

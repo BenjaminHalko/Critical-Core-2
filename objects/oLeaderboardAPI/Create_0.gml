@@ -15,6 +15,7 @@ moved = false;
 global.highscore = 0;
 global.gxGames = !is_undefined(gxc_get_query_param("game"));
 global.userID = "";
+global.noInternet = false;
 
 if (!global.gxGames) {
     LeaderboardGet();

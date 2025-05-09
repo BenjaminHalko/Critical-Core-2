@@ -16,7 +16,7 @@ if (!oLeaderboardAPI.draw) {
 						_usernameLength = string_length(global.username);
 					}
 					
-                    if (!global.gxGames)
+                    if (!global.gxGames and !global.noInternet)
 					   Save("settings","username",global.username);
 				}
 				option = Wrap(option + keyDown - keyUp, 0, 3 - global.gxGames);
@@ -34,6 +34,9 @@ if (!oLeaderboardAPI.draw) {
 					if !audio_is_playing(music) {
 						music = audio_play_sound(mMusic, 1, true);
 					}
+				}
+				if (global.noInternet) {
+					global.pb = 0;	
 				}
 				oGUI.alarm[0] = 1;
 				audio_play_sound(snStart,2,false);
