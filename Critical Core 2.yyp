@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"Critical Core 2",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -39,6 +39,7 @@
     {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Render","folderPath":"folders/Render.yy","name":"Render","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
